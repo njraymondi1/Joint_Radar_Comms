@@ -52,7 +52,7 @@ for i = 1:L
 end
 
 % draw \beta_l from standard complex gaussian distribution (a+jb), a,b~N(0,1/2)
-beta = randn([L,1]) + 1i*randn([L,1]);
+beta = sqrt(1/2)*(randn([L,1]) + 1i*randn([L,1]));
 betaMat = diag(beta);
 
 % Create the channel matrix according to Eq. (5)
